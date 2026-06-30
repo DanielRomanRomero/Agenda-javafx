@@ -1,0 +1,350 @@
+/* Tema oscuro */
+
+.root {
+    -fx-background-color: #1E1E2E;
+    -fx-text-fill: #CDD6F4;
+}
+
+.toolbar {
+    -fx-background-color: #181825;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 6, 0, 0, 2);
+}
+
+.logo-label {
+    -fx-text-fill: #CDD6F4;
+}
+
+.btn-nav {
+    -fx-background-color: #313244;
+    -fx-text-fill: #CDD6F4;
+}
+
+.btn-nav:hover {
+    -fx-background-color: #45475A;
+}
+
+.btn-primary {
+    -fx-background-color: #7C3AED;
+    -fx-text-fill: white;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #6D28D9;
+}
+
+.btn-ghost {
+    -fx-text-fill: #A6ADC8;
+    -fx-border-color: #45475A;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+}
+
+.btn-ghost:hover {
+    -fx-background-color: #313244;
+}
+
+.theme-toggle {
+    -fx-background-color: #313244;
+    -fx-text-fill: #CDD6F4;
+}
+
+.theme-toggle:hover {
+    -fx-background-color: #45475A;
+}
+
+/* Grid semanal */
+.semana-container {
+    -fx-background-color: #1E1E2E;
+}
+
+.dia-header {
+    -fx-background-color: #181825;
+    -fx-text-fill: #A6ADC8;
+    -fx-border-color: #313244;
+    -fx-border-width: 0 1 1 0;
+}
+
+.dia-hoy .dia-header {
+    -fx-background-color: #2D1B69;
+    -fx-text-fill: #CBA6F7;
+}
+
+.dia-hoy-marker {
+    -fx-background-color: #7C3AED;
+    -fx-min-height: 2;
+    -fx-pref-height: 2;
+}
+
+.hora-slot {
+    -fx-background-color: #1E1E2E;
+    -fx-border-color: #313244;
+}
+
+.hora-slot:hover {
+    -fx-background-color: #252535;
+}
+
+.hora-label {
+    -fx-text-fill: #A6ADC8;
+}
+
+/* Cards de tareas */
+.tarea-card {
+    -fx-background-color: #313244;
+    -fx-text-fill: #CDD6F4;
+}
+
+.tarea-card:hover {
+    -fx-background-color: #45475A;
+}
+
+.tarea-titulo-label {
+    -fx-text-fill: #CDD6F4;
+    -fx-font-size: 12px;
+}
+
+.tarea-desc-label {
+    -fx-text-fill: #A6ADC8;
+    -fx-font-size: 10px;
+    -fx-opacity: 0.85;
+}
+
+/* Formulario */
+.form-card {
+    -fx-background-color: #24273A;
+}
+
+.form-titulo {
+    -fx-text-fill: #CDD6F4;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.form-label {
+    -fx-text-fill: #A6ADC8;
+    -fx-font-size: 12px;
+}
+
+.campo-texto {
+    -fx-background-color: #313244;
+    -fx-text-fill: #CDD6F4;
+    -fx-border-color: #45475A;
+    -fx-prompt-text-fill: #6C7086;
+}
+
+.campo-texto:focused {
+    -fx-border-color: #7C3AED;
+    -fx-background-color: #2A2A3E;
+}
+
+/* El TextArea tiene un viewport interno (.content) que necesita colorearse por separado */
+.campo-texto .content {
+    -fx-background-color: #313244;
+}
+
+.campo-texto:focused .content {
+    -fx-background-color: #2A2A3E;
+}
+
+.label-error {
+    -fx-text-fill: #F38BA8;
+}
+
+.confirm-panel {
+    -fx-background-color: #2A1515;
+    -fx-border-color: #7F1D1D;
+}
+
+.confirm-texto {
+    -fx-text-fill: #FCA5A5;
+}
+
+/* Calendario mensual */
+.calendario-container {
+    -fx-background-color: #1E1E2E;
+}
+
+.cab-dia-semana {
+    -fx-text-fill: #6C7086;
+}
+
+.dia-mes {
+    -fx-background-color: #1E1E2E;
+}
+
+.dia-mes:hover {
+    -fx-background-color: #2A2A3E;
+}
+
+.dia-mes-numero {
+    -fx-text-fill: #CDD6F4;
+}
+
+.dia-otro-mes .dia-mes-numero {
+    -fx-text-fill: #45475A;
+}
+
+/* Separadores */
+.separator-line {
+    -fx-background-color: #313244;
+}
+
+/* ScrollPane sin borde visible */
+.scroll-pane {
+    -fx-background-color: #1E1E2E;
+    -fx-background: #1E1E2E;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: #1E1E2E;
+}
+
+.scroll-bar {
+    -fx-background-color: #181825;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #45475A;
+    -fx-background-radius: 4;
+}
+
+.combo-box {
+    -fx-background-color: #313244;
+    -fx-border-color: #45475A;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #CDD6F4;
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #313244;
+    -fx-border-color: #45475A;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #7C3AED;
+}
+
+.date-picker {
+    -fx-background-color: #313244;
+    -fx-border-color: #45475A;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #CDD6F4;
+}
+
+.check-box {
+    -fx-text-fill: #CDD6F4;
+}
+
+.check-box .box {
+    -fx-background-color: #313244;
+    -fx-border-color: #45475A;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #7C3AED;
+    -fx-border-color: #7C3AED;
+}
+
+.nav-semana-bar {
+    -fx-background-color: #181825;
+    -fx-padding: 8 16 8 16;
+    -fx-spacing: 8;
+}
+
+.nav-mes-bar {
+    -fx-background-color: #181825;
+    -fx-padding: 8 16 8 16;
+    -fx-spacing: 8;
+}
+
+.semana-label {
+    -fx-text-fill: #CDD6F4;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.mes-label {
+    -fx-text-fill: #CDD6F4;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+/* Popup resumen */
+.popup-resumen {
+    -fx-background-color: #24273A;
+    -fx-border-color: #45475A;
+}
+
+.popup-titulo {
+    -fx-text-fill: #CDD6F4;
+}
+
+.popup-info {
+    -fx-text-fill: #A6ADC8;
+}
+
+/* +N más */
+.mas-tareas-label {
+    -fx-background-color: #45475A;
+    -fx-text-fill: #CDD6F4;
+}
+
+.mas-tareas-label:hover {
+    -fx-background-color: #7C3AED;
+    -fx-text-fill: white;
+}
+
+/* Tarea sin hora */
+.tarea-sin-hora {
+    -fx-background-color: #313244;
+    -fx-text-fill: #CDD6F4;
+}
+
+.tarea-sin-hora:hover {
+    -fx-background-color: #45475A;
+}
+
+/* Notas rápidas */
+.notas-rapidas-container {
+    -fx-background-color: #181825;
+}
+
+.notas-rapidas-titulo {
+    -fx-text-fill: #A6ADC8;
+}
+
+.notas-rapidas-area {
+    -fx-background-color: #313244;
+    -fx-text-fill: #CDD6F4;
+    -fx-border-color: #45475A;
+    -fx-prompt-text-fill: #6C7086;
+}
+
+.notas-rapidas-area .content {
+    -fx-background-color: #313244;
+}
+
+.notas-rapidas-area:focused .content {
+    -fx-background-color: #2A2A3E;
+}
+
+.separator-notas {
+    -fx-background-color: #313244;
+}
+
+.btn-ghost {
+    -fx-padding: 4 10 4 10;
+    -fx-font-size: 12px;
+}

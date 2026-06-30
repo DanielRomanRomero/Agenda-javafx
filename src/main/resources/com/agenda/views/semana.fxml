@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.agenda.controllers.SemanaController"
+      styleClass="semana-container"
+      VBox.vgrow="ALWAYS">
+
+    <!-- Barra de navegación de semana -->
+    <HBox styleClass="nav-semana-bar" alignment="CENTER_LEFT" spacing="8">
+        <Button fx:id="btnAnterior" text="‹" styleClass="btn-nav"
+                onAction="#navegarAnterior" />
+        <Label fx:id="lblSemana" text="" styleClass="semana-label" />
+        <Button fx:id="btnSiguiente" text="›" styleClass="btn-nav"
+                onAction="#navegarSiguiente" />
+        <Button fx:id="btnHoy" text="Hoy" styleClass="btn-nav"
+                onAction="#navegarHoy" />
+        <Region HBox.hgrow="ALWAYS" />
+    </HBox>
+
+    <!-- Grid de la semana (construcción programática) -->
+    <ScrollPane fx:id="scrollSemana" styleClass="scroll-pane"
+                fitToWidth="true" VBox.vgrow="ALWAYS"
+                hbarPolicy="NEVER">
+        <HBox fx:id="gridSemana" styleClass="semana-container" />
+    </ScrollPane>
+
+    <!-- Divisor y área de notas rápidas -->
+    <Separator styleClass="separator-notas" />
+
+    <VBox styleClass="notas-rapidas-container" spacing="4">
+        <HBox alignment="CENTER_LEFT" spacing="8">
+            <Label text="📝  Notas rápidas" styleClass="notas-rapidas-titulo" />
+        </HBox>
+        <TextArea fx:id="txtNotasRapidas"
+                  promptText="Escribe anotaciones libres aquí..."
+                  styleClass="notas-rapidas-area"
+                  prefRowCount="3"
+                  wrapText="true" />
+    </VBox>
+
+</VBox>

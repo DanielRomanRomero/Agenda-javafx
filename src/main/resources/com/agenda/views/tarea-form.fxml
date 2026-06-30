@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- El overlay ocupa toda la StackPane del padre, con fondo semitransparente -->
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.agenda.controllers.TareaFormController"
+           fx:id="overlayPane"
+           styleClass="overlay-bg"
+           alignment="CENTER"
+           onMouseClicked="#clickOverlay">
+
+    <!-- Card del formulario — absorbe los clicks para que no cierren el overlay -->
+    <VBox styleClass="form-card" spacing="14" maxWidth="540"
+          onMouseClicked="#consumirClick">
+
+        <!-- Título del formulario -->
+        <Label fx:id="lblTituloForm" text="Nueva tarea" styleClass="form-titulo" />
+
+        <!-- Campo título -->
+        <VBox spacing="4">
+            <Label text="Título *" styleClass="form-label" />
+            <TextField fx:id="txtTitulo" promptText="Nombre de la tarea..."
+                       styleClass="campo-texto" />
+        </VBox>
+
+        <!-- Campo descripción -->
+        <VBox spacing="4">
+            <Label text="Descripción" styleClass="form-label" />
+            <TextArea fx:id="txtDescripcion" promptText="Descripción opcional..."
+                      styleClass="campo-texto" prefRowCount="3" wrapText="true" />
+        </VBox>
+
+        <!-- Fila: Fecha + Hora inicio + Hora fin -->
+        <HBox spacing="10">
+            <VBox spacing="4" HBox.hgrow="ALWAYS">
+                <Label text="Fecha" styleClass="form-label" />
+                <DatePicker fx:id="dateFecha" styleClass="campo-texto" maxWidth="Infinity" />
+            </VBox>
+            <VBox spacing="4">
+                <Label text="Hora inicio" styleClass="form-label" />
+                <ComboBox fx:id="cmbHoraInicio" styleClass="campo-texto" prefWidth="100" />
+            </VBox>
+            <VBox spacing="4">
+                <Label text="Hora fin" styleClass="form-label" />
+                <ComboBox fx:id="cmbHoraFin" styleClass="campo-texto" prefWidth="100" />
+            </VBox>
+        </HBox>
+
+        <!-- Fila: Tipo + Recordatorio -->
+        <HBox spacing="16" alignment="CENTER_LEFT">
+            <VBox spacing="4">
+                <Label text="Tipo" styleClass="form-label" />
+                <ComboBox fx:id="cmbTipo" styleClass="campo-texto" prefWidth="130" />
+            </VBox>
+            <VBox spacing="4" alignment="CENTER_LEFT">
+                <Label text="Recordatorio" styleClass="form-label" />
+                <HBox spacing="8" alignment="CENTER_LEFT">
+                    <CheckBox fx:id="chkRecordatorio" onAction="#onRecordatorioToggle" />
+                    <ComboBox fx:id="cmbMinutosAntes" styleClass="campo-texto"
+                              prefWidth="140" disable="true" />
+                </HBox>
+            </VBox>
+        </HBox>
+
+        <!-- Error inline -->
+        <Label fx:id="lblError" text="" styleClass="label-error" visible="false" managed="false" />
+
+        <!-- Panel de confirmación de borrado (oculto por defecto) -->
+        <VBox fx:id="confirmEliminarPane" styleClass="confirm-panel" spacing="8"
+              visible="false" managed="false">
+            <Label text="¿Eliminar esta tarea?" styleClass="confirm-texto"
+                   style="-fx-font-weight: bold;" />
+            <HBox spacing="8">
+                <Button text="Sí, eliminar" styleClass="btn-danger"
+                        onAction="#confirmarEliminar" />
+                <Button text="Cancelar" styleClass="btn-ghost"
+                        onAction="#cancelarEliminar" />
+            </HBox>
+        </VBox>
+
+        <!-- Botones de acción -->
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button fx:id="btnEliminar" text="Eliminar" styleClass="btn-danger"
+                    visible="false" managed="false" onAction="#solicitarEliminar" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button text="Cancelar" styleClass="btn-ghost" onAction="#cancelar" />
+            <Button text="Guardar" styleClass="btn-primary" onAction="#guardar" />
+        </HBox>
+
+    </VBox>
+</StackPane>

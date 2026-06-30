@@ -1,0 +1,338 @@
+/* Estilos compartidos entre ambos temas */
+
+.root {
+    -fx-font-family: "Segoe UI", "Inter", sans-serif;
+    -fx-font-size: 13px;
+}
+
+/* Toolbar superior */
+.toolbar {
+    -fx-padding: 10 20 10 20;
+    -fx-spacing: 12;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.logo-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 16 0 0;
+}
+
+/* Botones de navegación principal */
+.btn-nav {
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 6 14 6 14;
+    -fx-font-size: 13px;
+}
+
+.btn-nav:hover {
+    -fx-opacity: 0.85;
+}
+
+/* Botón primario (acento violeta) */
+.btn-primary {
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 6 16 6 16;
+    -fx-font-weight: bold;
+}
+
+.btn-primary:hover {
+    -fx-opacity: 0.88;
+}
+
+/* Botón de peligro (eliminar) */
+.btn-danger {
+    -fx-background-color: #EF4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 6 14 6 14;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #DC2626;
+}
+
+/* Botón fantasma (cancelar) */
+.btn-ghost {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 6 14 6 14;
+}
+
+/* Semana — cabecera de columna */
+.dia-header {
+    -fx-padding: 8 4 8 4;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-alignment: CENTER;
+    -fx-min-width: 120;
+}
+
+/* Slot de hora en la vista semanal */
+.hora-slot {
+    -fx-min-height: 60px;
+    -fx-pref-height: 60px;
+    -fx-border-width: 0 0 1 0;
+    -fx-cursor: hand;
+}
+
+/* Card de tarea dentro de un slot */
+.tarea-card {
+    -fx-background-radius: 6;
+    -fx-padding: 4 6 4 6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 4, 0, 0, 2);
+    -fx-border-radius: 6;
+    -fx-border-width: 0 0 0 3;
+}
+
+.tarea-card-nota {
+    -fx-border-color: #F59E0B;
+}
+
+.tarea-card-tarea {
+    -fx-border-color: #7C3AED;
+}
+
+/* Tarea completada — texto tachado */
+.tarea-completada {
+    -fx-strikethrough: true;
+    -fx-opacity: 0.55;
+}
+
+/* Badge de recordatorio */
+.recordatorio-badge {
+    -fx-background-color: #F59E0B;
+    -fx-background-radius: 3;
+    -fx-padding: 1 4 1 4;
+    -fx-font-size: 10px;
+    -fx-text-fill: white;
+}
+
+/* Overlay modal — fondo semitransparente */
+.overlay-bg {
+    -fx-background-color: rgba(0, 0, 0, 0.52);
+}
+
+/* Card del formulario */
+.form-card {
+    -fx-background-radius: 12;
+    -fx-padding: 28 32 28 32;
+    -fx-max-width: 540px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 20, 0, 0, 8);
+}
+
+/* Campos de texto del formulario */
+.campo-texto {
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-width: 1;
+    -fx-padding: 6 10 6 10;
+    -fx-font-size: 13px;
+}
+
+.campo-texto:focused {
+    -fx-border-color: #7C3AED;
+}
+
+/* Etiqueta de error inline */
+.label-error {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* Confirmación de borrado inline */
+.confirm-panel {
+    -fx-background-radius: 8;
+    -fx-padding: 12 16 12 16;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-border-color: #EF4444;
+}
+
+/* Calendario mensual — celda de día */
+.dia-mes {
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-padding: 4;
+    -fx-min-height: 70px;
+    -fx-pref-height: 80px;
+    -fx-min-width: 80px;
+}
+
+.dia-mes:hover {
+    -fx-opacity: 0.85;
+}
+
+.dia-mes-numero {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.dia-mes-hoy .dia-mes-numero {
+    -fx-background-color: #7C3AED;
+    -fx-text-fill: white;
+    -fx-background-radius: 50%;
+    -fx-padding: 2 6 2 6;
+}
+
+/* Indicador de tareas en el mes */
+.punto-tarea {
+    -fx-min-width: 6;
+    -fx-pref-width: 6;
+    -fx-min-height: 6;
+    -fx-pref-height: 6;
+    -fx-background-radius: 3;
+    -fx-background-color: #7C3AED;
+}
+
+/* Encabezados de días de la semana en el calendario */
+.cab-dia-semana {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-padding: 6 0 6 0;
+    -fx-opacity: 0.6;
+}
+
+/* Toggle de tema */
+.theme-toggle {
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-padding: 5 12 5 12;
+    -fx-font-size: 14px;
+}
+
+/* Label de hora en la columna izquierda del grid semanal */
+.hora-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-opacity: 1.0;
+    -fx-padding: 2 6 0 4;
+    -fx-min-width: 48;
+    -fx-pref-width: 48;
+    -fx-alignment: TOP_RIGHT;
+}
+
+/* Día con tareas en calendario */
+.dia-con-tareas {
+    -fx-opacity: 1.0;
+}
+
+/* Día fuera del mes actual */
+.dia-otro-mes {
+    -fx-opacity: 0.3;
+}
+
+/* Tarea completada — card con opacidad reducida */
+.tarea-card-completada {
+    -fx-opacity: 0.55;
+}
+
+/* Icono de check en la card */
+.tarea-check-icon {
+    -fx-font-size: 11px;
+    -fx-text-fill: #22C55E;
+    -fx-font-weight: bold;
+}
+
+/* Título tachado para tareas completadas */
+.tarea-titulo-completada {
+    -fx-strikethrough: true;
+}
+
+/* Indicador "+N más" en slot con muchas tareas */
+.mas-tareas-label {
+    -fx-font-size: 10px;
+    -fx-cursor: hand;
+    -fx-padding: 2 4 2 4;
+    -fx-background-radius: 4;
+    -fx-font-weight: bold;
+}
+
+/* Popup de resumen de tarea */
+.popup-resumen {
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.35), 16, 0, 0, 6);
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+}
+
+.popup-titulo {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+}
+
+.popup-info {
+    -fx-font-size: 12px;
+    -fx-opacity: 0.75;
+    -fx-wrap-text: true;
+}
+
+/* Botón de completar en popup */
+.btn-completar {
+    -fx-background-color: #22C55E;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-padding: 4 10 4 10;
+    -fx-font-size: 12px;
+}
+
+.btn-completar:hover {
+    -fx-background-color: #16A34A;
+}
+
+/* Botón de eliminar pequeño en popup */
+.btn-danger-small {
+    -fx-background-color: #EF4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-padding: 4 8 4 8;
+    -fx-font-size: 12px;
+}
+
+.btn-danger-small:hover {
+    -fx-background-color: #DC2626;
+}
+
+/* Tarea sin hora asignada (chip sobre el header) */
+.tarea-sin-hora {
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+    -fx-padding: 2 6 2 6;
+    -fx-background-radius: 4;
+}
+
+/* Notas rápidas */
+.notas-rapidas-container {
+    -fx-padding: 8 16 12 16;
+}
+
+.notas-rapidas-titulo {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-opacity: 0.7;
+}
+
+.notas-rapidas-area {
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-width: 1;
+    -fx-font-size: 12px;
+    -fx-pref-row-count: 3;
+}
+
+.notas-rapidas-area:focused {
+    -fx-border-color: #7C3AED;
+}
+
+.separator-notas {
+    -fx-padding: 0;
+}

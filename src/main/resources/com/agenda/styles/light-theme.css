@@ -1,0 +1,344 @@
+/* Tema claro */
+
+.root {
+    -fx-background-color: #F8F9FA;
+    -fx-text-fill: #1E1E2E;
+}
+
+.toolbar {
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 8, 0, 0, 2);
+}
+
+.logo-label {
+    -fx-text-fill: #1E1E2E;
+}
+
+.btn-nav {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #374151;
+}
+
+.btn-nav:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+.btn-primary {
+    -fx-background-color: #7C3AED;
+    -fx-text-fill: white;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #6D28D9;
+}
+
+.btn-ghost {
+    -fx-text-fill: #6B7280;
+    -fx-border-color: #D1D5DB;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+}
+
+.btn-ghost:hover {
+    -fx-background-color: #F3F4F6;
+}
+
+.theme-toggle {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #374151;
+}
+
+.theme-toggle:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* Grid semanal */
+.semana-container {
+    -fx-background-color: #F8F9FA;
+}
+
+.dia-header {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #374151;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 1 1 0;
+}
+
+.dia-hoy .dia-header {
+    -fx-background-color: #EDE9FE;
+    -fx-text-fill: #5B21B6;
+}
+
+.dia-hoy-marker {
+    -fx-background-color: #7C3AED;
+    -fx-min-height: 2;
+    -fx-pref-height: 2;
+}
+
+.hora-slot {
+    -fx-background-color: #F8F9FA;
+    -fx-border-color: #E5E7EB;
+}
+
+.hora-slot:hover {
+    -fx-background-color: #EDE9FE;
+}
+
+.hora-label {
+    -fx-text-fill: #4B5563;
+}
+
+/* Cards de tareas */
+.tarea-card {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #1E1E2E;
+}
+
+.tarea-card:hover {
+    -fx-background-color: #F3F4F6;
+}
+
+.tarea-titulo-label {
+    -fx-text-fill: #1E1E2E;
+    -fx-font-size: 12px;
+}
+
+.tarea-desc-label {
+    -fx-text-fill: #4B5563;
+    -fx-font-size: 10px;
+    -fx-opacity: 0.85;
+}
+
+/* Formulario */
+.form-card {
+    -fx-background-color: #FFFFFF;
+}
+
+.form-titulo {
+    -fx-text-fill: #1E1E2E;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.form-label {
+    -fx-text-fill: #6B7280;
+    -fx-font-size: 12px;
+}
+
+.campo-texto {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #1E1E2E;
+    -fx-border-color: #D1D5DB;
+    -fx-prompt-text-fill: #9CA3AF;
+}
+
+.campo-texto:focused {
+    -fx-border-color: #7C3AED;
+    -fx-background-color: #FAFAFA;
+}
+
+.label-error {
+    -fx-text-fill: #DC2626;
+}
+
+.confirm-panel {
+    -fx-background-color: #FEF2F2;
+    -fx-border-color: #FECACA;
+}
+
+.confirm-texto {
+    -fx-text-fill: #B91C1C;
+}
+
+/* Calendario mensual */
+.calendario-container {
+    -fx-background-color: #F8F9FA;
+}
+
+.cab-dia-semana {
+    -fx-text-fill: #9CA3AF;
+}
+
+.dia-mes {
+    -fx-background-color: #FFFFFF;
+}
+
+.dia-mes:hover {
+    -fx-background-color: #EDE9FE;
+}
+
+.dia-mes-numero {
+    -fx-text-fill: #374151;
+}
+
+.dia-otro-mes .dia-mes-numero {
+    -fx-text-fill: #D1D5DB;
+}
+
+/* Separadores */
+.separator-line {
+    -fx-background-color: #E5E7EB;
+}
+
+/* ScrollPane */
+.scroll-pane {
+    -fx-background-color: #F8F9FA;
+    -fx-background: #F8F9FA;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: #F8F9FA;
+}
+
+.scroll-bar {
+    -fx-background-color: #F3F4F6;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #D1D5DB;
+    -fx-background-radius: 4;
+}
+
+.combo-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D5DB;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #374151;
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D5DB;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #7C3AED;
+    -fx-text-fill: white;
+}
+
+.date-picker {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D5DB;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #374151;
+}
+
+.check-box {
+    -fx-text-fill: #374151;
+}
+
+.check-box .box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D5DB;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #7C3AED;
+    -fx-border-color: #7C3AED;
+}
+
+.nav-semana-bar {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 8 16 8 16;
+    -fx-spacing: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 4, 0, 0, 1);
+}
+
+.nav-mes-bar {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 8 16 8 16;
+    -fx-spacing: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 4, 0, 0, 1);
+}
+
+.semana-label {
+    -fx-text-fill: #1E1E2E;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.mes-label {
+    -fx-text-fill: #1E1E2E;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+/* Popup resumen */
+.popup-resumen {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E5E7EB;
+}
+
+.popup-titulo {
+    -fx-text-fill: #1E1E2E;
+}
+
+.popup-info {
+    -fx-text-fill: #6B7280;
+}
+
+/* +N más */
+.mas-tareas-label {
+    -fx-background-color: #E5E7EB;
+    -fx-text-fill: #374151;
+}
+
+.mas-tareas-label:hover {
+    -fx-background-color: #7C3AED;
+    -fx-text-fill: white;
+}
+
+/* Tarea sin hora */
+.tarea-sin-hora {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #374151;
+}
+
+.tarea-sin-hora:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* Notas rápidas */
+.notas-rapidas-container {
+    -fx-background-color: #F8F9FA;
+}
+
+.notas-rapidas-titulo {
+    -fx-text-fill: #6B7280;
+}
+
+.notas-rapidas-area {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #1E1E2E;
+    -fx-border-color: #D1D5DB;
+    -fx-prompt-text-fill: #9CA3AF;
+}
+
+.notas-rapidas-area .content {
+    -fx-background-color: #FFFFFF;
+}
+
+.notas-rapidas-area:focused .content {
+    -fx-background-color: #FAFAFA;
+}
+
+.separator-notas {
+    -fx-background-color: #E5E7EB;
+}
+
+.btn-ghost {
+    -fx-padding: 4 10 4 10;
+    -fx-font-size: 12px;
+}
