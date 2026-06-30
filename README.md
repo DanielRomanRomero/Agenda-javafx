@@ -32,6 +32,7 @@ Agenda semanal de productividad desarrollada con JavaFX y Java 25. Incluye calen
 ---
 
 ## Estructura del proyecto
+```
 agenda/
 ├── pom.xml
 └── src/main/
@@ -45,6 +46,7 @@ agenda/
 ├── views/
 ├── styles/
 └── database/
+```
 
 ---
 
